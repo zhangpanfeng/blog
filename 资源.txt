@@ -1,0 +1,18 @@
+垂直居中：
+http://www.blueidea.com/tech/web/2006/3231.asp
+http://www.qianduan.net/css-to-achieve-the-vertical-center-of-the-five-kinds-of-methods.html
+
+JSON 格式化：
+http://pro.jsonlint.com/
+http://json.parser.online.fr/
+
+上边两个好用
+http://jsonlint.com/
+http://www.bejson.com/go.php?u=http://www.bejson.com/index.php
+
+CSS 测试能使用的属性：
+http://caniuse.com/
+
+CSS 在线测试工具：
+http://jsfiddle.net/
+http://codepen.io/pen/
