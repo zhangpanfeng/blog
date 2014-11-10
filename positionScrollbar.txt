@@ -1,0 +1,29 @@
+<html>
+<head>
+<script type="text/javascript" src="/jquery/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".btn1").click(function(){
+    $("div").scrollTop(100);
+  });
+  $(".btn2").click(function(){
+    alert($("div").scrollTop()+" px");
+  });
+});
+</script>
+</head>
+<body>
+<div style="border:1px solid black;width:200px;height:200px;overflow:auto">
+This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.
+</div>
+<button class="btn1">把 scroll top offset 设置为 100px</button>
+<br />
+<button class="btn2">获得 scroll top offset</button>
+</body>
+</html>
+
+注意滚动条所在的div必须有overflow属性且value不能为hidden
+这种情况主要用于使用了滚动条插件的情况，一眼看去不知道那个div在滚动，随意找一个div是不能正常工作的。
+如果想加入一点动画效果，可以适应animate方法
+$('#shang').click(function(){$('html,body').animate({scrollTop: '0px'}, 800);});
+第二个选择器就是带有overflow属性的滚动条所在的容器
