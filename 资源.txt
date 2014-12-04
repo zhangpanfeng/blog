@@ -1,20 +1,24 @@
-´¹Ö±¾ÓÖĞ£º
+å‚ç›´å±…ä¸­ï¼š
 http://www.blueidea.com/tech/web/2006/3231.asp
 http://www.qianduan.net/css-to-achieve-the-vertical-center-of-the-five-kinds-of-methods.html
 
-JSON ¸ñÊ½»¯£º
+JSON æ ¼å¼åŒ–ï¼š
 http://pro.jsonlint.com/
 http://json.parser.online.fr/
 
-ÉÏ±ßÁ½¸öºÃÓÃ
+ä¸Šè¾¹ä¸¤ä¸ªå¥½ç”¨
 http://jsonlint.com/
 http://www.bejson.com/go.php?u=http://www.bejson.com/index.php
 
-CSS ²âÊÔÄÜÊ¹ÓÃµÄÊôĞÔ£º
+CSS æµ‹è¯•èƒ½ä½¿ç”¨çš„å±æ€§ï¼š
 http://caniuse.com/
 
-CSS ÔÚÏß²âÊÔ¹¤¾ß£º
+CSS åœ¨çº¿æµ‹è¯•å·¥å…·ï¼š
 http://jsfiddle.net/
 http://codepen.io/pen/
 
 http://www.55lady.net/t/article-227-2.html
+
+
+æšä¸¾çš„ä¸ƒç§ç”¨æ³•ï¼š
+http://developer.51cto.com/art/201301/376254.htm
