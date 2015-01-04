@@ -15,14 +15,16 @@ public class CustomString {
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
-            return true;
-        }
-        if (obj instanceof CustomString) {
-            CustomString customString = (CustomString) obj;
-            return customString.value.equals(value);
-        }
 
-        return false;
+            return true;
+        } else if (obj instanceof CustomString) {
+            CustomString customString = (CustomString) obj;
+
+            return customString.value.equals(value);
+        } else {
+
+            return false;
+        }
     }
 
     @Override
