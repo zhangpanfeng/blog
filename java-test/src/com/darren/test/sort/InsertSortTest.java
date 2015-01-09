@@ -3,24 +3,30 @@ package com.darren.test.sort;
 public class InsertSortTest {
 
     public static void main(String[] args) {
-        int[] array = new int[] { 3, 5, 9, 8, 6, 4, 3, 1, 8, 7 };
+        int[] source = new int[] { 3, 5, 9, 8, 6, 4, 3, 1, 8, 7 };
 
         System.out.print("before sort:");
-        print(array);
+        print(source);
         System.out.println();
-        int size = array.length;
-        for (int i = 1; i < size; i++) {
-            int sentinel = array[i];
-            for (int j = i - 1; sentinel < array[j]; j--) {
-                array[j + 1] = array[j];
-                array[j] = sentinel;
-                if (j == 0) {
-                    break;
+        int size = source.length;
+        for (int outer = 1; outer < size; outer++) {
+            int sentinel = source[outer];
+            // for (int inner = outer - 1; sentinel < array[inner]; inner--) {
+            // array[inner + 1] = array[inner];
+            // array[inner] = sentinel;
+            // if (inner == 0) {
+            // break;
+            // }
+            // }
+            for (int inner = outer - 1; inner >= 0; inner--) {
+                if (source[inner] > source[inner + 1]) {
+                    source[inner + 1] = source[inner];
+                    source[inner] = sentinel;
                 }
             }
         }
         System.out.print("after sort:");
-        print(array);
+        print(source);
     }
 
     private static void print(int[] source) {

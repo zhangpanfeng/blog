@@ -3,26 +3,29 @@ package com.darren.test.sort;
 public class SelectSortTest {
 
     public static void main(String[] args) {
-        int[] array = new int[] { 3, 5, 9, 8, 6, 4, 3, 1, 8, 7 };
+        int[] source = new int[] { 3, 5, 9, 8, 6, 4, 3, 1, 8, 7 };
 
         System.out.print("before sort:");
-        print(array);
+        print(source);
         System.out.println();
-        int size = array.length;
+        int size = source.length;
         for (int outer = 0; outer < size - 1; outer++) {
+            // 设置参照物为最左边元素
             int min = outer;
             for (int inner = outer + 1; inner < size; inner++) {
-                if (array[inner] < array[min]) {
+                if (source[inner] < source[min]) {
+                    // 更新参照物
                     min = inner;
                 }
             }
-            int temp = array[outer];
-            array[outer] = array[min];
-            array[min] = temp;
+            // 交换最小值和最左边值
+            int temp = source[outer];
+            source[outer] = source[min];
+            source[min] = temp;
         }
 
         System.out.print("after sort:");
-        print(array);
+        print(source);
     }
 
     private static void print(int[] source) {

@@ -10,7 +10,7 @@ public class BubbleSortTest {
         System.out.println();
 
         int size = array.length;
-        for (int outer = size - 1; outer >= 0; outer--) {
+        for (int outer = size - 1; outer > 0; outer--) {
             for (int inner = 0; inner < outer; inner++) {
                 if (array[inner] > array[inner + 1]) {
                     int temp = array[inner + 1];
