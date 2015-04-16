@@ -1,0 +1,26 @@
+﻿如图所示，如果有五个元素需要排序，那么需要排n-1趟，并且下标是从1到n-1，那么我们是不是可以写出一个循环出来，
+for(int i = 1; i < size; i++)
+由图可知，我们每次都是把source[i]插入到左边，那么是不是应该把source[i]临时保存一下呢，我想是应该的：
+int temp = source[i];
+那么算法内部是如何进行比较插入的呢，接下来进行分析，我们发现一直向左边插入，其实左边的序列一直是有序的
+那么我们就会从右向左比较插入就行了，所以第二个for循环是倒着的
+for(int j = ?; j >=0; j--)
+从图上可知j可以为0，那么最大可以是多少呢，再分析一下，最大比i小1，所以修改for循环
+for(int j = i - 1; j >=0; j--)
+怎么比较呢
+source[j] 和 source[j+1]进行比较。此时source[j+1]刚好等于source[i]，因为j + 1 = i;
+把变量取得有意义一点，结果为
+for(int outer = 1; outer < size; outer++)
+{
+	int sentinel = source[i];
+	for(int inner = outer - 1; inner >= 0; inner--)
+	{
+		if(source[inner] > source[inner + 1])
+		{
+			source[inner + 1] = source[inner];
+			source[inner] = sentinel;
+		}
+	}
+}
+
+
