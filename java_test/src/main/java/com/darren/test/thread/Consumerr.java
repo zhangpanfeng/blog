@@ -1,9 +1,9 @@
 package com.darren.test.thread;
 
-public class Consumer extends Thread {
+public class Consumerr extends Thread {
     private Resource resource;
 
-    public Consumer(Resource resource) {
+    public Consumerr(Resource resource) {
         this.resource = resource;
     }
 

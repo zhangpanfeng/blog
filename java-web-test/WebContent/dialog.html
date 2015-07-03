@@ -1,0 +1,55 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="jquery-ui/themes/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="jquery-ui/themes/theme.css">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="jquery-ui/ui/jquery-ui.js"></script>
+<script type="text/javascript" src="js/dialog.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#button").click(function(){
+            
+            var option = {
+        			modal: true,
+        			buttons: {
+        				Ok: function() {
+        					$(this).dialog('close');
+        					alert("xxx");
+        				}
+        			}
+        		};
+            
+            Dialog.showDialog(option);
+            
+        });
+        
+        $( document ).tooltip({
+            items: ".div",
+            content: function() {
+              var element = $( this );
+              var url = element.attr("src");
+              return "<img width='200' height='200' src='" +url + "'>";
+            }
+          });
+    });
+</script>
+</head>
+<body>
+<button id="button" >show dialog</button>
+<div id="dialog-message" title="Download complete">
+    <p>
+        <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span>
+        Your files have downloaded successfully into the My Downloads folder.
+    </p>
+    <p>
+        Currently using <b>36% of your storage space</b>.
+    </p>
+</div>
+<div class="div" src="images/red_flag.png">xxx</div>
+<div class="div" src="images/white_flag.png">yyy</div>
+</body>
+</html>

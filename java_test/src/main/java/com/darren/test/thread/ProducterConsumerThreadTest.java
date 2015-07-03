@@ -5,7 +5,7 @@ public class ProducterConsumerThreadTest {
     public static void main(String[] args) {
         Resource resource = new Resource();
         Provider provider = new Provider(resource);
-        Consumer consumer = new Consumer(resource);
+        Consumerr consumer = new Consumerr(resource);
 
         provider.start();
         consumer.start();
